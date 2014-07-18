@@ -1,0 +1,3960 @@
+/******************************************************************
+Site Name: United Way of Metropolitan Chicago
+Author: UWMC Web Dev/Joshua Michaels
+Stylesheet: Main Stylesheet
+******************************************************************/
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "ff-meta-web-pro", "Trebuchet", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  /*  outline: thin dotted; */
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+address {
+  font-style: normal;
+}
+
+/*
+ * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p {
+  margin: 0.3em 0 1em;
+}
+
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Monaco", "Consolat", "courier new", monospace;
+  _font-family: "Monaco", "Consolat", "courier new", monospace;
+  font-size: 1em;
+}
+
+code {
+  background-color: #F7F7F9;
+  border: 1px solid #e1e1e8;
+  color: green;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 85%;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 85%;
+}
+
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none;
+}
+
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 0 0 0 1em;
+}
+
+dd {
+  margin: 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7.
+ */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
+ *    to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+p {
+  -webkit-hyphens: none;
+  -epub-hyphens: auto;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+b, strong, .strong {
+  font-weight: bold;
+}
+
+dfn, em, .em {
+  font-style: italic;
+}
+
+small, .small {
+  font-size: 75%;
+}
+
+ul, ol {
+  padding: 0;
+  /* list-style-type: none; */
+}
+
+dd {
+  margin: 0;
+}
+
+.sidebar ul,
+.sidebar ol,
+.commentlist {
+  list-style: none;
+}
+
+/******************************************************************
+Site Name: UWMC
+Author: Joshua Michaels
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/*
+$tg: "alternate-gothic-no-3-d", "Helvetica Neue",Helvetica, Arial, sans-serif;
+$tg2: "alternate-gothic-no-2-d", "Helvetica Neue",Helvetica, Arial, sans-serif;
+*/
+.trade {
+  font-family: "TradeGothicW01-BoldCn20 675334";
+}
+
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+GLYPHICONS
+After going through many iterations of buttons and icons, I finally
+settled on using slightly modified Bootstrap buttons which can be
+found in _buttons.scss. The Bootstrap buttons came with their own
+glyphicons but unfortunately those were using an image sprit that
+wasnot retina ready.
+ 
+So, after some digging I created my own retina-ready @font-face set 
+at the amazing IcoMoon site: http://icomoon.io/app/ They are 
+encoded as Base64 so no font files to load (except for IE fallback).
+
+To see all the included glyphs with class names, go here:
+[theme_url]/library/fonts/glyphs.html
+
+For usage guidelines, please see the readme.txt file.
+
+To insert (for example in a button/link), use this:
+<a class="btn" href="#"><span class="icon-home"></span>Home</a>
+
+Easy peasy.
+******************************************************************/
+@font-face {
+  font-family: 'iconstandard';
+  src: url("../library/fonts/iconstandard.eot");
+}
+
+@font-face {
+  font-family: 'iconstandard';
+  src: url(data:application/x-font-woff;charset=utf-8;base64,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) format("woff"), url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAANAIAAAwBQRkZUTWbwlqQAABsUAAAAHEdERUYAXQAGAAAa9AAAACBPUy8yL77cHwAAAVgAAABWY21hcOBr89MAAAJwAAABUmdhc3D//wADAAAa7AAAAAhnbHlmQLaGxgAABCgAABMYaGVhZPvRNI0AAADcAAAANmhoZWEEEAANAAABFAAAACRobXR4WqoCRwAAAbAAAADAbG9jYW+ea2QAAAPEAAAAYm1heHAAfgCKAAABOAAAACBuYW1leOq5MgAAF0AAAAG/cG9zdCPhkhMAABkAAAAB6gABAAAAAQAAcWU8/V8PPPUACwIAAAAAAM1ZeeoAAAAAzVl56v///9wCAAHgAAAACAACAAAAAAAAAAEAAAHg/9wALgIA///+AAIAAAEAAAAAAAAAAAAAAAAAAAAwAAEAAAAwAIcADAAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQMAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUGZFZABA4ADwAAHg/+AALgHgACSAAAABAAAAAAAAAgAAAAAAAAAAqgAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAgAgAAAAIAAGACAAAAAgAAYAIAAAACAABAAgAAYAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAECAAAAAgAAAAIAAAACAAAGAgAAAAIAAAACAAAAAgAAAAIAAAACAAAgAgAAIAIAACACAAAgAgAAAAIAAEACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAAAAAAAAAAAAwAAAAMAAAAcAAEAAAAAAEwAAwABAAAAHAAEADAAAAAIAAgAAgAAAADgK/AA//8AAAAA4ADwAP//AAAgAxAvAAEAAAAAAAAAAAAAAQYAAAEAAAAAAAAAAQIAAAACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAWACEAMgA5gEiAXgBoAHYAgwCPgKaAqoC1AMEAygDUANuA44D2APqBAYEOAR8BLYE6gUyBV4FuAZ+BtQHKAeaCCAIRgiGCKQIygjmCQIJHgk6CVQJfgmMAAAAAQAAAAACAAGwABAAACUnNSMVJwEVMxUzNTMVMzUzAgBgQGD/AECgQKBAsGCQUGD/ABCgYGCgAAAHAAAAIAIAAaAACwAPABMAFwAbAB8AIwAAATUhERQWMyEyNjURAyERIQUhFSEXMxUjFTMVIxUzFSMnMxUjAcD+QBMNAbAUHGD+gAGA/qABQP7AwICAgIBgYMCgoAFgQP6gDRMcFAEQ/uABQEAgICAgICAgoKAAAAAEAAAAAAIAAcAAAwAHAA4AFgAAASERIRMRIREBITU3FzcVJhQWMjY0JiIBwP6AAYBA/gABoP7AYIRcYBwoHBwoAYD+wAGA/kABwP6gQKCgQCCEKBwcKBwABAAAAAACAAGgAAcAIQApAC0AADYUFjI2NCYiJSMuAisBIg4BByMiBhURFBYzITI2NRE0JgIiJjQ2MhYUNyM1M5g9Vj09VgELcAUIFA+ADxQIBXANExMNAcANExOydlNTdlNSQEDbVj09Vj1IFRYVFRYVEw3+4A0TEw0BIA0T/sJTdlNTdosgAAIAAAAgAgABoAALAA4AAAEmIgcGFBcWMjc2NAU1FwHrcPZwFRVw9nAV/sCgAZAQEFS4VBAQVLi8wGAAAAMAIP/gAeAB4AATAB4AJAAAAScuASsBIgYVERQWMyEyNjURNCYnMhcWHwEWFxYVIxMhETMVMwG+PA4wFOAUHBwUAWAUHBSMAgENBTwFBQFcYP7AwIABgjwOFBwU/mAUHBwUASAUMCgBBQU8BQ0BAv7gAYCAAAAAAAwAAP/gAeAB4AADAAcACwAPABMAFwAbAB8AIwAnADMANwAAEzMVIzczFSM3MxUjBTMVIzczFSM3MxUjJzMVIzczFSM3MxUjJTMVIwEVIzUjFSM1IxEhEQMhESGgQEBgQEBgQED+4EBAYEBAYEBAYEBAYEBAYEBA/uBAQAFgQOBAQAHgIP5gAaABIEBAQEBAgEBAQEBAoEBAQEBAQEABYCAgICD+AAIA/iABYAACAGD/4AGgAeAAEAAYAAAAIgYVFB4CHwE+BDU0BiImNDYyFhQBQoReIS8vERAHFTcqI3hQODhQOAHgXkItaVdKFRQIHFNRay1CojhQODhQAAQAAAAAAgABwAADABcAGwAjAAATIRUhBSEiBh0BFBY7ARUhNTMyNj0BNCYDIzUzNhQGIiY0NjKAAQD/AAFg/kANExMNYAEAYA0TE43AwIcNFA0NFAHAQCATDaANE4CAEw2gDRP+wKB6FA0NFA0AAAAEAGD/4AGgAeAADwATABsAHwAAASMiBhURFBY7ATI2NRE0JgczFSMSIiY0NjIWFDchESEBcOAUHBwU4BQcHMSAgE0aExMaE2D/AAEAAeAcFP5gFBwcFAGgFBwYEP5IExoTExpNAUAAAAIAAP/gAgAB4AAVAB0AACUnJgc2NTQmIgYUFjMyNwYfAR4BNiYkIiY0NjIWFAHweRMSLnCgcHBQRzYBEWcNJhoC/vZqS0tqSyxnEQE2R1BwcKBwLhITeQ8CGiaBS2pLS2oAAAAHAED/4AHAAeAACQANAB0ALQAxADUAOQAAASEiBh0BITU0JicXIz8BIyIGDwEGFjsBMjYvAS4BFyEiBhcTHgE7ATI2NxM2JgMjJzMXIzUzFyM1MwGQ/uAUHAGAHGgHhgd8gAoQAQoBDAqgCgwBCgEQTv7QDREBGgEVDfANFQEaARHlMBBAYEBAUDBAAaAcFBAQFBwgMjIgDgpDCg0NCkMKDqATDf7gDRMTDQEgDRP+4ODg4ODgAAAAAQBg/+ABoAHgAAQAABMRNxcRYKCgAeD+AKCgAgAAAAAEAAD/4AIAAeAABwAPABMAFwAAACIGFBYyNjQkMhYUBiImNBczFSMRMxUjAVasenqsev7G1JaW1JbgQEBAQAGweqx6eqyqltSWltTKQAFAwAAAAAAEAAD/4AIAAeAABwAPABMAHQAAACIGFBYyNjQCIiY0NjIWFCczFSMXIzUzNSM1MxUzAWrUlpbUlqqsenqsevBAQGCAICBgIAHgltSWltT+xnqsenqs1kDAIGAggAAAAAADAAD/4AIAAeAABwALABUAAAAiBhQWMjY0JTMVIxMjNTM1IzUzFTMBatSWltSW/uBAQGCAICBgIAHgltSWltQ2QP8AIIAgoAACAAD/4AIAAeAABwAXAAAAIgYUFjI2NA8BFxUjJwcjNTcnNTMXNzMBatSWltSWgFNTLVNTLVNTLVNTLQHgltSWltQXU1MtU1MtU1MtU1MAAAIAAP/gAgAB4AAHAA0AAAAiBhQWMjY0ASc3FzcXAWrUlpbUlv7Qai87uRcB4JbUlpbU/vaKMUuXFwAAAAQAAP/gAgAB4AAAAAgADAAQAAAlAyMHFRczNzUDIzUzNSM1MwIAkOCQkOCQ4EBAQEBwAXCQ4JCQ4P7wQEDAAAABAAH/4QH/Ad8AKwAAJSc3Njc2LwEmBwYPAScmJyYPAQYXFh8BBwYHBh8BFjc2PwEXFhcWPwE2JyYB+5ubAwEECEkHCgMDm5sDAwoHSQgEAQObmwMBBAhJBwoDA5ubAwMKB0kIBAFFm5sDAwoHSQgEAQObmwMBBAhJBwoDA5ubAwMKB0kIBAEDm5sDAQQISQcKAwAAAQAAABACAAGgAAUAAAEHJwcXAQGw8HBQwAFAAaDwcFDAAUAAAQAAAKACAAEgAA8AABEVFBYzITI2PQE0JiMhIgYJBwHgBwkJB/4gBwkBEGAHCQkHYAcJCQAAAAABAAD/4AIAAeAAIwAAASM1NCYrASIGHQEjIgYdARQWOwEVFBY7ATI2PQEzMjY9ATQmAfCwCQdgBwmwBwkJB7AJB2AHCbAHCQkBILAHCQkHsAkHYAcJsAcJCQewCQdgBwkAAAAAAwAG/+AB+gHgAA0AHQAtAAAlAy4BIgYHAwYWMyEyNicUBisBIiY9ATQ2OwEyFhU1FAYrASImPQE0NjsBMhYVAfnACB8kHwjAECUkAYAkJekJByAHCQkHIAcJCQcgBwkJByAHCT0BgBATExD+gCA9PRMHCQkHIAcJCQdgBwkJB6AHCQkHAAAAAAQAAAAgAgABoAAPABMAFwAgAAABISIGFREUFjMhMjY1ETQmASc3FwUnNxcnFSM1JzcXNxcB0P5gFBwcFAGgFBwc/kgMhAwBJIQMhNAg0BTMzBQBoBwU/uAUHBwUASAUHP6gDIQMhIQMhF8LC8EUvb0UAAAAAgAA/+ACAAHgAA8AIwAAASEiBhURFBYzITI2NRE0JgMjFSM1IzUzNTQ2OwEVIyIGHQEzAav+qiMyMiMBViMyMhtTYC4uMTdYSA8JYAHgMiP+qiMyMiMBViMy/wDg4EkwMzRPDxEoAAAB//8ADwIAAbEAMAAAAQYHNjcGByYjIgYVFBcuAScGFRQXIicUFRQWFwYjIiceATMGIyInFjMyPgI1NDU2AgAdHyIMHyQfLis+A0BxJw8vGRYvJQ4OCgoLNSM6SQ0MSldGdEkoHwF/DQQVJRIHIT0sDAwDOjEZHDgfDQEBJToIAwIgKS0BLzZXaTUHBhcAAAADAAD/4AIAAeAABwAQABsAADYiBhQWMjY0JxUyFhUzNC4BJxUyHgEVMzQuAmA4KCg4KIhjjGNbm1xwv29iUYm+aSg5Jyc58WKMZFybW65ib79waL6JUQAAAgAA/+ACAAHgAAcANwAAACIGFBYyNjQHLgInDgEHJj4CNyY+ARceAQ4BFhcWPgEmJy4BDgEXHgIUByY3PgE3NhYXFgYBatSWltSW5wsOGAIKGBkGCAgQAwkEIBYQAw0MCBQaKRAIEBhEOSMFAgkGBzgDAU4yPmAICUYB4JbUlpbUwAEFEQEwPxIXQyM9ERQwIQkGIScnHgQFKDtBERgFHjwiCBAKEwsNSzVJBgc5N0RsAAAACAAg/+AB4AHgADUAOwBFAE8AWwBvAHYAhgAAJSYnIgcmJyYnNjU+Aic0LwEmKwEiBwYXBwYPAQYPAQYHBgcGHwEWMzI3NjcWMzI3Njc2JyYFNjc2NwYTMhUWByY1MDQ2BzY3NjcWFxYXBhcGIyInNjMyFx4BBjcnLgErASIGFREUFjMhMjY1ETQmBxYXIzUWFxMUIyEiNRE0OwEyFxUzFhUBpQojGB4RCB4PAQEEBQIBAQYMBREECBUDCRUBDw0JDwQvBQMICAUGHzE9PTInBgQHBAYCAf7BCCECBx9yCwEJBgInCQYPCxEZAwQzsAMIDyIMChAMBgYBJUgLKRDwEBgYEAFwEBgRIgIDUgMDWgj+kAgI8AQEfwG5CgEECgccKwQDBxUtCQMDAg4NHU4IFSkCHRcECQIcGQsEBANVFAkcAQIFChAEbBYcAQYwASohFBATGgwM2w8MHBwfFQMDCg0CDwEDAgQE2EgLERgQ/lAQGBgQATARKAsDA1IDAv5bCAgBsAgBfwQEAAAABAAg/+AB4AHgAA4AIgApADkAACUzBycjBycjEzM3FzMTIzcnLgErASIGFREUFjMhMjY1ETQmBxYXIzUWFxMUIyEiNRE0OwEyFxUzFhUBQBYaITUnHDg4NyYiMkFVhEgLKRDwEBgYEAFwEBgRIgIDUgMDWgj+kAgI8AQEfwHycZ+fn/8Al5cBAFxICxEYEP5QEBgYEAEwESgLAwNSAwL+WwgIAbAIAX8EBAAAAAQAIP/gAeAB4AANACEAKAA4AAABIwcnIxcHMzUjNxczJzcnLgErASIGFREUFjMhMjY1ETQmBxYXIzUWFxMUIyEiNRE0OwEyFxUzFhUBdEQwMERSXIMeGThGXKJICykQ8BAYGBABcBAYESICA1IDA1oI/pAICPAEBH8BASBHR3mHLiVTh9VICxEYEP5QEBgYEAEwESgLAwNSAwL+WwgIAbAIAX8EBAAAAAsAIP/gAeAB4AADAAcACwAPABMAFwAjACcAOwBCAFIAABMzFSsBMxUjOwEVKwEzFSM7ARUrATMVIzMVIxUUFjsBMjY9AQcjNTM3Jy4BKwEiBhURFBYzITI2NRE0JgcWFyM1FhcTFCMhIjURNDsBMhcVMxYV0DAwMDAwMDAwMDAwMDAwMDAwMDAJB0AHCRBAQNRICykQ8BAYGBABcBAYESICA1IDA1oI/pAICPAEBH8BAaAgICAgICAgcAcJCQeQgCD8SAsRGBD+UBAYGBABMBEoCwMDUgMC/lsICAGwCAF/BAQAAAb////gAgAB4AADAAsAOABHAEsAYAAANTQ1FDYWNi4CBhYlNTQmIyEiBgc2OwEHIx4BFRQHDgEVFBYXHgEVFAczMjY1ESMVIzUjNTM1MxUFOgEzJjU0NwYjIicdATYHJicWFy4GJyYjJgYHHgE7ATY1NFNFKQw5RSkMAeYyI/6qIjIBNjmzKDgbHjIWDSAPIxwDmiMyYCBgYCD+vQUVBRgJBwo3JSspAQEB4wIFCQcPCBUFFRchOxIGLx6QAS0CAgKXAj9aQAI9WlgrIzIxIi8iCjkjNicRFA4LIgsYNCgMDDIjAQtgYCBgYP8YGg8SASAhZRQ9BQQEJQYLCggLBg4DBwEYFR0nCAkJAAACAED/4AHAAeAAFAAYAAAFISImNRE7ATI2PQMzMhYVERQGAx0BIwGw/qAHCRCABwnQBwkJ94AgCQcBUAkHUDAQCQf+IAcJAgBAQAAAAwAAAAACAAHAABkAIQApAAABIyc0JisBIgYVByMiBhURFBYzITI2NRE0JgIiJjQ2MhYUJiIGFBYyNjQB8FgYCQfgBwkYWAcJCQcB4AcJCcJqS0tqS2U2JSU2JQGAMAcJCQcwCQf+oAcJCQcBYAcJ/sBLaktLanUlNiUlNgAAAAACAAD/4AIAAeAABwANAAAAIgYUFjI2NAUnNxc3FwFq1JaW1Jb+2HUtSJotAeCW1JaW1OB2LUmaLQAAAAACAAD/4AIAAeAABwATAAAAIgYUFjI2NA8BJwcnNyc3FzcXBwFq1JaW1JaBLlFRLlJSLlFRLlIB4JbUlpbUuy5SUi5RUS5SUi5RAAAAAgAA/+ACAAHgAAcADgAAJDQmIgYUFjIDNxUzFSMVAgCW1JaW1OqAgIB21JaW1JYBAIBgQGAAAAACAAD/4AIAAeAABwAOAAAQFBYyNjQmIhMHNSM1MzWW1JaW1OqAgIABStSWltSW/wCAYEBgAAAAAAIAAP/gAgAB4AAHAA4AABYyNjQmIgYUJRcjFSM1I5bUlpbUlgEAgGBAYCCW1JaW1OqAgIAAAAAAAgAA/+ACAAHgAAcADgAAACIGFBYyNjQFJzM1MxUzAWrUlpbUlv8AgGBAYAHgltSWltTqgICAAAABAAAAAAIAAcAADAAAATUXBzUiBgc+BAEf4eFjkioCITBQSAEhn+DgoTFCMk0xJRQAAAAAAwAA/9wCAAHgAAcADwAXAAAAIgYUFjI2NAQiJjQ2MhYUFiImNDYyFhQBatSWltSW/rFCLy9CL7FCLy9CLwHgl9aXl9a5L0IvL0IvL0IvL0IAAAAAAQAA/+ACAAHgAAIAABEBIQIA/gAB4P4AAAAAAAAADACWAAEAAAAAAAEADAAaAAEAAAAAAAIABwA3AAEAAAAAAAMAJwCPAAEAAAAAAAQADADRAAEAAAAAAAUACwD2AAEAAAAAAAYADAEcAAMAAQQJAAEAGAAAAAMAAQQJAAIADgAnAAMAAQQJAAMATgA/AAMAAQQJAAQAGAC3AAMAAQQJAAUAFgDeAAMAAQQJAAYAGAECAGkAYwBvAG4AcwB0AGEAbgBkAGEAcgBkAABpY29uc3RhbmRhcmQAAFIAZQBnAHUAbABhAHIAAFJlZ3VsYXIAAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAAaQBjAG8AbgBzAHQAYQBuAGQAYQByAGQAIAA6ACAAMwAtADMALQAyADAAMQAzAABGb250Rm9yZ2UgMi4wIDogaWNvbnN0YW5kYXJkIDogMy0zLTIwMTMAAGkAYwBvAG4AcwB0AGEAbgBkAGEAcgBkAABpY29uc3RhbmRhcmQAAFYAZQByAHMAaQBvAG4AIAAxAC4AMAAAVmVyc2lvbiAxLjAAAGkAYwBvAG4AcwB0AGEAbgBkAGEAcgBkAABpY29uc3RhbmRhcmQAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAABAAIBAgEDAQQBBQEGAQcBCAEJAQoBCwEMAQ0BDgEPARABEQESARMBFAEVARYBFwEYARkBGgEbARwBHQEeAR8BIAEhASIBIwEkASUBJgEnASgBKQEqASsBLAEtAS4HdW5pRTAwMAd1bmlFMDAxB3VuaUUwMDIHdW5pRTAwMwd1bmlFMDA0B3VuaUUwMDUHdW5pRTAwNgd1bmlFMDA3B3VuaUUwMDgHdW5pRTAwOQd1bmlFMDBBB3VuaUUwMEIHdW5pRTAwQwd1bmlFMDBEB3VuaUUwMEUHdW5pRTAwRgd1bmlFMDEwB3VuaUUwMTEHdW5pRTAxMgd1bmlFMDEzB3VuaUUwMTQHdW5pRTAxNQd1bmlFMDE2B3VuaUUwMTcHdW5pRTAxOAd1bmlFMDE5B3VuaUUwMUEHdW5pRTAxQgd1bmlFMDFDB3VuaUUwMUQHdW5pRTAxRQd1bmlFMDFGB3VuaUUwMjAHdW5pRTAyMQd1bmlFMDIyB3VuaUUwMjMHdW5pRTAyNAd1bmlFMDI1B3VuaUUwMjYHdW5pRTAyNwd1bmlFMDI4B3VuaUUwMjkHdW5pRTAyQQd1bmlFMDJCB3VuaUYwMDAAAAAAAAH//wACAAEAAAAOAAAAGAAAAAAAAgABAAMALwABAAQAAAACAAAAAAABAAAAAMw9os8AAAAAzVl56gAAAADNWXnq) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'iconstandard';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-home:before, .icon-newspaper:before, .icon-image:before, .icon-camera:before, .icon-play:before, .icon-file:before, .icon-calendar:before, .icon-location:before, .icon-print:before, .icon-mobile:before, .icon-search:before, .icon-remove:before, .icon-bookmark:before, .icon-notification:before, .icon-info:before, .icon-info-2:before, .icon-cancel-circle:before, .icon-checkmark-circle:before, .icon-spam:before, .icon-close:before, .icon-checkmark:before, .icon-minus:before, .icon-plus:before, .icon-warning:before, .icon-envelope:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-pinterest:before, .icon-file-pdf:before, .icon-file-word:before, .icon-file-excel:before, .icon-file-zip:before, .icon-google-plus:before, .icon-file-2:before, .icon-camera-2:before, .icon-check-alt:before, .icon-x-altx-alt:before, .icon-arrow-left-alt1:before, .icon-arrow-right-alt1:before, .icon-arrow-up-alt1:before, .icon-arrow-down-alt1:before, .icon-forward:before, .icon-flickr:before {
+  font-family: 'iconstandard';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+
+.icon-home:before {
+  content: "\e000";
+}
+
+.icon-newspaper:before {
+  content: "\e001";
+}
+
+.icon-image:before {
+  content: "\e002";
+}
+
+.icon-camera:before {
+  content: "\e003";
+}
+
+.icon-play:before {
+  content: "\e004";
+}
+
+.icon-file:before {
+  content: "\e005";
+}
+
+.icon-calendar:before {
+  content: "\e006";
+}
+
+.icon-location:before {
+  content: "\e007";
+}
+
+.icon-print:before {
+  content: "\e008";
+}
+
+.icon-mobile:before {
+  content: "\e009";
+}
+
+.icon-search:before {
+  content: "\e00a";
+}
+
+.icon-remove:before {
+  content: "\e00b";
+}
+
+.icon-bookmark:before {
+  content: "\e00c";
+}
+
+.icon-notification:before {
+  content: "\e00d";
+}
+
+.icon-info:before {
+  content: "\e00e";
+}
+
+.icon-info-2:before {
+  content: "\e00f";
+}
+
+.icon-cancel-circle:before {
+  content: "\e010";
+}
+
+.icon-checkmark-circle:before {
+  content: "\e011";
+}
+
+.icon-spam:before {
+  content: "\e012";
+}
+
+.icon-close:before {
+  content: "\e013";
+}
+
+.icon-checkmark:before {
+  content: "\e014";
+}
+
+.icon-minus:before {
+  content: "\e015";
+}
+
+.icon-plus:before {
+  content: "\e016";
+}
+
+.icon-warning:before {
+  content: "\e017";
+}
+
+.icon-envelope:before {
+  content: "\e018";
+}
+
+.icon-facebook:before {
+  content: "\e019";
+}
+
+.icon-twitter:before {
+  content: "\e01a";
+}
+
+.icon-feed:before {
+  content: "\e01b";
+}
+
+.icon-pinterest:before {
+  content: "\e01c";
+}
+
+.icon-file-pdf:before {
+  content: "\e01d";
+}
+
+.icon-file-word:before {
+  content: "\e01e";
+}
+
+.icon-file-excel:before {
+  content: "\e01f";
+}
+
+.icon-file-zip:before {
+  content: "\e020";
+}
+
+.icon-google-plus:before {
+  content: "\e021";
+}
+
+.icon-file-2:before {
+  content: "\e022";
+}
+
+.icon-camera-2:before {
+  content: "\e023";
+}
+
+.icon-check-alt:before {
+  content: "\e024";
+}
+
+.icon-x-altx-alt:before {
+  content: "\e025";
+}
+
+.icon-arrow-left-alt1:before {
+  content: "\e026";
+}
+
+.icon-arrow-right-alt1:before {
+  content: "\e027";
+}
+
+.icon-arrow-up-alt1:before {
+  content: "\e028";
+}
+
+.icon-arrow-down-alt1:before {
+  content: "\e029";
+}
+
+.icon-forward:before {
+  content: "\e02a";
+}
+
+.icon-flickr:before {
+  content: "\e02b";
+}
+
+.icon-location {
+  position: relative;
+  left: -2px;
+}
+
+/******************************************************************
+Site Name: United Way of Metropolitan Chicago
+Author: Joshua Michaels
+
+Stylesheet: UWMCCommon Stylesheet
+
+This stylesheet contains all the common and shared styles 
+used for all the UWMC sites. Please be wary of changing or 
+adding anything in this stylesheet as it will affect ALL 
+the sites - not just the one you are working on! A great
+deal of work has gone into locating and grouping common/shared
+elements and delineating the common styles contained here.
+To add custom styles, please use the site-specific stylesheet
+found in each site's theme css folder. Let's Go!
+
+For more info on these stylesheets please see the README file: 
+http://www.uw-mc.org/wp-content/themes/uwchilipepper/css/readme.rtf
+
+******************************************************************/
+/* These may be useful to link to files between sites */
+/*********************
+3. COLORS
+*********************/
+/* CSS fallbacks */
+.uwblue {
+  color: #10167F;
+}
+
+.uwdarkblue {
+  color: #000064;
+}
+
+.uwlightblue {
+  color: #508AC8;
+}
+
+.uwlblue {
+  color: #7C81B8;
+}
+
+.uworange {
+  color: #FF9600;
+}
+
+.uwlightorange {
+  color: #FFC87D;
+}
+
+.uwdarkorange {
+  color: #F57814;
+}
+
+.uwred {
+  color: #FE230A;
+}
+
+.uwlightred {
+  color: #FF967D;
+}
+
+.uwdarkred {
+  color: #B41428;
+}
+
+.uwlightgrey {
+  color: #BABABA;
+}
+
+.uwdarkbeige {
+  color: #E6D7AA;
+}
+
+.uwbeige {
+  color: #F0E6C8;
+}
+
+/* Link Colors */
+/* use for links */
+/*********************
+4. TYPOGRAPHY
+*********************/
+.trade18 {
+  font-family: "Trade Gothic W01 Cn 18", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Trade Gothic (from http://fonts.com/) */
+@font-face {
+  font-family: "TradeGothicW01-BoldCn20 675334";
+  src: url("http://fast.fonts.com/d/5fdc935e-9e30-442a-bbe9-8d887b858471.woff?d44f19a684109620e484157fa090e81827ce8bcedca4597b20c379a7d855282db70a7f9314e106917f6a248f62d5247609c7d1c8771a790fee58a05c297b811be9d80e723d551ce04f5724f4a06790e1d48c00c7ce2f80568a58f1c93d9444c99a28503c34fda86a89f7bb6e0d15ec988c86e4261494f9167441dc2b63888de361ac3d732df92ca7bb338846019da693e9040a9313f2992c4229be159d3f4d6e7773d837304cb4&projectId=3f2542b6-eb6e-4ca9-a8cf-c3572d6adca6") format("woff");
+}
+
+@font-face {
+  font-family: "Trade Gothic W01 Cn 18";
+  src: url("http://fast.fonts.com/d/fb754dec-aa8f-444c-be48-868464c47ab0.woff?d44f19a684109620e484157fa090e81827ce8bcedca4597b20c379a7d855282db70a7f9314e106917f6a248f62d5247609c7d1c8771a790fee58a05c297b811be9d80e723d551ce04f5724f4a06790e1d48c00c7ce2f80568a58f1c93d9444c99a28503c34fda86a89f7bb6e0d15ec988c86e4261494f9167441dc2b63888de361ac3d732df92ca7bb338846019da693e9040a9313f2992c4229be159d3f4d6e7773d837304cb4&projectId=3f2542b6-eb6e-4ca9-a8cf-c3572d6adca6") format("woff");
+}
+
+h1.tgh1 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tgh1lg {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+span.tg2 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+h1.center {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tg2 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tg4 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tgh1 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tg3 {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.tg {
+  font-family: 'TradeGothicW01-BoldCn20 675334';
+}
+
+.page-title {
+  color: #ff9600;
+}
+
+.page-title-blue {
+  color: #10167f;
+}
+
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/*********************
+5. BORDERS & OUTLINES
+*********************/
+/*********************
+6. GOLDEN RATIO
+*********************/
+/**********************************************************************************
+7. Global Elements
+These are elements that are found (and shared) across all the UWMC web properties.
+These styles are device-independent so do not need to be part of a media query.
+***********************************************************************************/
+section#call-to-action a {
+  text-decoration: none;
+}
+
+.article-header a {
+  text-decoration: none;
+  color: #10167f;
+}
+
+/* span.action-img { margin: 0 1em 0 0.5em; } */
+span.action-img {
+  left: 6px;
+  position: absolute;
+  top: 6px;
+}
+
+span.action-text {
+  left: 60px;
+  position: absolute;
+  top: 6px;
+}
+
+span.take-action-arrow {
+  background: #ffc87d;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.1;
+  text-align: center;
+  position: absolute;
+  left: 83%;
+  top: 14px;
+  font-family: "ff-meta-web-pro", "Trebuchet MS", Verdana, sans-serif;
+}
+
+#container {
+  background: #000064;
+  background-color: #10167f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000064), to(#10167f));
+  background-image: -webkit-linear-gradient(top, #000064, #10167f);
+  background-image: -moz-linear-gradient(top, #000064, #10167f);
+  background-image: -o-linear-gradient(top, #000064, #10167f);
+  background-image: linear-gradient(to bottom, #000064, #10167f);
+}
+#container:hover, #container:focus {
+  background-color: #000064;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000064), to(#10167f));
+  background-image: -webkit-linear-gradient(bottom, #000064, #10167f);
+  background-image: -moz-linear-gradient(bottom, #000064, #10167f);
+  background-image: -o-linear-gradient(bottom, #000064, #10167f);
+  background-image: linear-gradient(to top, #000064, #10167f);
+}
+#container .wrap {
+  background: white;
+  max-width: 1140px;
+}
+
+section#call-to-action ul.action-nav a li {
+  background: #ff9600;
+  border-bottom: 1px solid #f57814;
+  font-family: "TradeGothicW01-BoldCn20 675334", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  position: relative;
+  height: 60px;
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+section#call-to-action ul.action-nav a li:hover, section#call-to-action ul.action-nav a li:focus, section#call-to-action ul.action-nav a li:active {
+  background-color: #f08d00;
+}
+
+#mission section:first-child h3 {
+  color: #ff9600;
+}
+
+.nav-button {
+  display: none;
+}
+
+/* hide the navigation button by default */
+#nav-mobile {
+  display: none;
+}
+
+#ultimate, .ultimatebutton, .ultimateDeleteButton {
+  display: none !important;
+}
+
+/* 
+CALL TO ACTION MIXIN
+Used for the CTA buttons on all the pages except the home page.
+*/
+/* Common Formatting Classes */
+.small {
+  font-size: 75%;
+}
+
+.nomargin {
+  margin: 0;
+  padding: 0;
+}
+
+.last-right {
+  margin-right: 0 !important;
+  float: right;
+}
+
+.action-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 75%;
+}
+
+.nostyle {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/*********************************
+8. COMMON MEDIA QUERIES
+**********************************/
+/* TABLET AND SMALLER DESKTOPS & ABOVE
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  /*
+  BEFORE CONTAINER
+  These are elements before the actual header starts like our network nav and email signup. 
+  Basically, the grey bar at the top and not much else.
+  */
+  #beforecontainer {
+    position: relative;
+    display: block;
+    background: #bababa;
+    height: 35px;
+  }
+  #beforecontainer #beforecontainerwrap {
+    max-width: 1140px;
+  }
+  #beforecontainer #beforecontainerwrap #network-nav {
+    width: 50%;
+    display: inline-block;
+  }
+  #beforecontainer #beforecontainerwrap #network-nav p {
+    padding-left: 0.5em;
+    color: #dedede;
+    margin: 0 0 0 1em;
+    line-height: 2;
+  }
+  #beforecontainer #beforecontainerwrap #network-nav p a {
+    color: white;
+    font-size: 80%;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  #beforecontainer #beforecontainerwrap #network-nav p a:hover, #beforecontainer #beforecontainerwrap #network-nav p a:focus {
+    color: #515151;
+  }
+  #beforecontainer #beforecontainerwrap #email-signup {
+    float: right;
+    position: relative;
+    right: 23px;
+    top: 3px;
+    		   /*
+    .flatbutton { background: #aaa; color: #fff;  border: 0 none; padding: 3px 20px; text-transform: uppercase; 
+    			   &:hover, &:focus { background-color: #969696; }
+    			   	}
+    */
+  }
+
+  /*******
+  HEADER
+  *******/
+  #logo {
+    margin-bottom: 1em;
+    display: block !important;
+  }
+  #logo img {
+    max-width: 500px;
+  }
+  #logo a {
+    width: 500px;
+  }
+  #logo span {
+    color: #10167f;
+    float: right;
+    font-size: 1em;
+    font-weight: 600;
+    left: -2px;
+    position: relative;
+    top: 11px;
+  }
+
+  #logo-mobile {
+    display: none;
+  }
+
+  #cta-buttons {
+    width: 51.8034%;
+    display: inline-block;
+  }
+  #cta-buttons ul {
+    margin-bottom: .5em;
+  }
+  #cta-buttons ul li {
+    display: inline-block;
+    margin-right: .5em;
+  }
+  #cta-buttons ul li a {
+    text-shadow: none;
+  }
+  #cta-buttons ul li a:active {
+    position: relative;
+    top: 1px;
+  }
+  #cta-buttons ul li a#cta-give {
+    border-radius: 5px;
+    font-family: "TradeGothicW01-BoldCn20 675334", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 0.2em 1em;
+    background: #ff9600;
+    color: white;
+    text-decoration: none;
+    border-top: 0px solid #f57814;
+    border-bottom: 0px solid #ffc87d;
+  }
+  #cta-buttons ul li a#cta-give:hover, #cta-buttons ul li a#cta-give:focus {
+    background: #f57814;
+  }
+  #cta-buttons ul li a#cta-give:active {
+    background: #ffc87d;
+    color: #f57814;
+    -webkit-box-shadow: 0 0 0.63em #f57814 inset, 0 -0.088em #ff9600 inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 0 0.63em #f57814 inset, 0 -0.088em #ff9600 inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0.63em #f57814 inset, 0 -0.088em #ff9600 inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+  }
+  #cta-buttons ul li a#cta-advocate {
+    border-radius: 5px;
+    font-family: "TradeGothicW01-BoldCn20 675334", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 0.2em 1em;
+    background: #fe230a;
+    color: white;
+    text-decoration: none;
+    border-top: 0px solid #b41428;
+    border-bottom: 0px solid #ff967d;
+  }
+  #cta-buttons ul li a#cta-advocate:hover, #cta-buttons ul li a#cta-advocate:focus {
+    background: #b41428;
+  }
+  #cta-buttons ul li a#cta-advocate:active {
+    background: #ff967d;
+    color: #b41428;
+    -webkit-box-shadow: 0 0 0.63em #b41428 inset, 0 -0.088em #fe230a inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 0 0.63em #b41428 inset, 0 -0.088em #fe230a inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0.63em #b41428 inset, 0 -0.088em #fe230a inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+  }
+  #cta-buttons ul li a#cta-volunteer {
+    border-radius: 5px;
+    font-family: "TradeGothicW01-BoldCn20 675334", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 0.2em 1em;
+    background: #10167f;
+    color: white;
+    text-decoration: none;
+    border-top: 0px solid #000064;
+    border-bottom: 0px solid #7c81b8;
+  }
+  #cta-buttons ul li a#cta-volunteer:hover, #cta-buttons ul li a#cta-volunteer:focus {
+    background: #000064;
+  }
+  #cta-buttons ul li a#cta-volunteer:active {
+    background: #7c81b8;
+    color: #000064;
+    -webkit-box-shadow: 0 0 0.63em #000064 inset, 0 -0.088em #10167f inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 0 0.63em #000064 inset, 0 -0.088em #10167f inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0.63em #000064 inset, 0 -0.088em #10167f inset, 0 0 0.863em rgba(255, 255, 255, 0.6);
+  }
+  #cta-buttons ul li a#cta-volunteer:hover {
+    background: #7c81b8;
+  }
+
+  #sub-page-search {
+    width: 38.1966%;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    left: 8%;
+    top: -2px;
+  }
+  #sub-page-search #s {
+    font-size: .875em;
+    width: 50%;
+    position: relative;
+    top: -1px;
+  }
+  #sub-page-search #searchsubmit {
+    text-shadow: 0 -1px 0 #888888;
+  }
+
+  /* INNER HEADER/NAVIGATION */
+  #inner-header.wrap {
+    padding: 1.5em 1.5em 0 1.5em;
+  }
+  #inner-header.wrap nav {
+    background: #10167f;
+    width: 100%;
+    max-height: 44px;
+  }
+  #inner-header.wrap nav ul#menu-main {
+    width: auto;
+    display: inline-block;
+  }
+  #inner-header.wrap nav #give-nav {
+    display: inline-block;
+    float: right;
+    position: relative;
+    right: 17px;
+    top: 8px;
+  }
+  #inner-header.wrap nav #give-nav button {
+    font-size: .875em;
+    padding: 0.2em 1.5em;
+    margin-bottom: 0;
+    text-shadow: 0 -1px 0 #888888;
+    letter-spacing: .1em;
+  }
+
+  #inner-header .nav li {
+    background: #10167f;
+  }
+  #inner-header .nav li:hover, #inner-header .nav li:focus {
+    background: #323D93;
+  }
+  #inner-header .nav li a {
+    text-transform: uppercase;
+    position: relative;
+  }
+  #inner-header .nav li a:hover, #inner-header .nav li a:focus {
+    color: #7c81b8;
+  }
+
+  /**************************************************
+  CONTENT
+  This includes all the content below  the main
+  navigation until the footer
+  ***************************************************/
+  #inner-content.wrap {
+    padding: 0 1.5em 1.5em 1.5em;
+  }
+
+  #inner-footer.wrap {
+    padding: 0 1.5em;
+    border-top: 1px dotted #dddddd;
+  }
+
+  #footer-nav.wrap {
+    background: #000064;
+  }
+  #footer-nav.wrap nav {
+    padding: 0 0 0 0.7em;
+  }
+  #footer-nav.wrap nav ul {
+    /* li:first-child { margin-left: 0; padding-left: 0; } */
+  }
+  #footer-nav.wrap nav ul li a {
+    text-transform: uppercase;
+  }
+  #footer-nav.wrap nav ul li:hover, #footer-nav.wrap nav ul li:focus {
+    background: #7c81b8;
+  }
+
+  /*
+  ACTION
+  Includes the home slider, take action buttons and social buttons
+  */
+  section#action-home {
+    display: none;
+  }
+
+  div#action {
+    height: 378px;
+    background: #000064;
+  }
+  div#action #home-slider {
+    width: 61.8%;
+    background: #eee;
+    height: inherit;
+    float: left;
+  }
+  div#action #actions {
+    float: right;
+    width: 38.2%;
+    max-height: 378px;
+    overflow: hidden;
+  }
+  div#action #actions #search-form {
+    font-size: .875em;
+    position: relative;
+    margin: 1.5em 1.5em 0;
+    text-align: right;
+    right: -2px;
+  }
+  div#action #actions #search-form form#searchform {
+    position: relative;
+    right: 5px;
+  }
+  div#action #actions #search-form form#searchform input#s {
+    width: 71%;
+  }
+  div#action #actions #search-form form#searchform input#searchsubmit {
+    text-shadow: 0 -1px 0 #888888;
+    background-color: #aaaaaa;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#aaaaaa));
+    background-image: -webkit-linear-gradient(top, #bababa, #aaaaaa);
+    background-image: -moz-linear-gradient(top, #bababa, #aaaaaa);
+    background-image: -o-linear-gradient(top, #bababa, #aaaaaa);
+    background-image: linear-gradient(to bottom, #bababa, #aaaaaa);
+  }
+  div#action #actions #search-form form#searchform input#searchsubmit:hover, div#action #actions #search-form form#searchform input#searchsubmit:focus {
+    background-color: #bababa;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#bababa), to(#aaaaaa));
+    background-image: -webkit-linear-gradient(bottom, #bababa, #aaaaaa);
+    background-image: -moz-linear-gradient(bottom, #bababa, #aaaaaa);
+    background-image: -o-linear-gradient(bottom, #bababa, #aaaaaa);
+    background-image: linear-gradient(to top, #bababa, #aaaaaa);
+  }
+  div#action #actions section#call-to-action {
+    margin: 0 1.5em 2em;
+  }
+  div#action #actions section#call-to-action ul.action-nav {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  div#action #actions section#call-to-action ul.action-nav a li {
+    margin: 0.5em 0;
+  }
+  div#action #actions section#call-to-action ul.action-nav a li span.action-img {
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    border-bottom: none;
+  }
+  div#action #actions section#call-to-action ul.action-nav a li span.action-img img {
+    padding-right: .3em;
+    border-right: 1px solid #f57814;
+  }
+  div#action #actions section#call-to-action ul.action-nav a li span.action-text {
+    top: -2px;
+    left: 80px;
+  }
+  div#action #actions section#call-to-action ul.action-nav a li span.action-details {
+    color: #ffc87d;
+    display: block;
+    font-family: "ff-meta-web-pro";
+    font-size: 16px;
+    left: 80px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 36px;
+  }
+  div#action #actions #social-buttons {
+    background: #f0e6c8;
+    min-height: 80px;
+    padding: 0.6em 0 0.6em 1em;
+  }
+  div#action #actions #social-buttons ul, div#action #actions #social-buttons x:-moz-any-link, div#action #actions #social-buttons x:default {
+    position: relative;
+    top: -2px;
+  }
+  div#action #actions #social-buttons ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    max-height: 48px;
+    position: absolute;
+  }
+  div#action #actions #social-buttons ul li {
+    display: inline-block;
+    padding: 0 0.8em;
+  }
+  div#action #actions #social-buttons ul li a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+  }
+  div#action #actions #social-buttons ul li a img {
+    width: 48px;
+    height: 48px;
+  }
+  div#action #actions #social-buttons ul li a img:hover, div#action #actions #social-buttons ul li a img:focus {
+    opacity: 0.7;
+  }
+  div#action #actions #social-buttons ul li a li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .page-template-default section#call-to-action, .single section#call-to-action {
+    display: none;
+  }
+
+  /***********************************
+  MAIN
+  Everything after nav and action
+  down to footer
+  ************************************/
+  .button-nav {
+    /* background: $uwlightred; */
+    clear: both;
+    display: block;
+    padding: 1.5em 0;
+  }
+  .button-nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    list-style-type: none;
+  }
+  .button-nav ul li {
+    width: 100%;
+  }
+  .button-nav ul li a {
+    float: left;
+    background: #508ac8;
+    margin-right: 1.39%;
+    width: 13.09%;
+    min-height: 96px;
+    color: #10167f;
+    text-align: center;
+  }
+
+  #main {
+    margin-top: 2.2em;
+    padding: 0 1.5em 1em;
+    border-right: 1px dotted #dddddd;
+  }
+
+  #main:last-child {
+    border-right: none;
+  }
+
+  /**********************************
+  WORDPRESS BODY CLASSES
+  style a page via class
+  Remember, you are @ 768px and above.
+  ***********************************/
+  /* for sites that are read right to left (i.e. hebrew) */
+  .home .homemain {
+    overflow: hidden;
+  }
+  .home .homemain section h3, .home .homemain header h3 {
+    margin-top: 0;
+  }
+  .home .homemain section p:first-child {
+    margin-top: 0;
+  }
+  .home .homemain #mission {
+    width: 33.33%;
+    float: left;
+    min-height: 500px;
+    padding-left: 0;
+  }
+  .home .homemain #mission h3 {
+    margin-bottom: 0;
+  }
+  .home .homemain #mission p {
+    margin-top: .5em;
+  }
+  .home .homemain #posts {
+    width: 43.33%;
+    float: left;
+  }
+  .home .homemain #posts p {
+    font-size: .875em;
+  }
+  .home .homemain #posts h3.post-title {
+    margin-bottom: 0;
+  }
+  .home .homemain #posts h3.post-title:hover, .home .homemain #posts h3.post-title:focus {
+    color: #7c81b8;
+  }
+  .home .homemain #posts p.byline {
+    margin: 0 0 0.5em 0;
+    font-size: .7em;
+  }
+  .home .homemain #posts p {
+    margin: 0.5em 0;
+  }
+  .home .homemain #posts article {
+    margin-bottom: 1.2em;
+  }
+  .home .homemain #tweet {
+    width: 23.33%;
+    float: left;
+    padding-right: 0;
+  }
+  .home .homemain #tweet #latest-tweets h3 {
+    margin-bottom: 0;
+  }
+  .home .homemain #tweet #latest-tweets #twitter-data {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #dddddd;
+    font-size: .72em;
+  }
+  .home .homemain #tweet #latest-tweets #twitter-data span {
+    position: relative;
+    top: -4px;
+  }
+  .home .homemain #tweet #latest-tweets #twitter-data:last-child {
+    border-bottom: 0;
+  }
+  .home .homemain .homecontent {
+    padding: 0 1.5em 1em;
+    border-right: 1px dotted #dddddd;
+    /*
+    CSS trick for having all the columns the same height as the tallest column.
+    Containing element (in our case .homemain) must have overflow:hidden
+    See here: http://css-tricks.com/fluid-width-equal-height-columns/
+    */
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+  .home .homemain .homecontent:last-child {
+    border-right: none;
+  }
+
+  /* home page */
+  /* blog template page */
+  /* archive page */
+  /* date archive page */
+  /* replace the number to the corresponding page number */
+  /* search page */
+  /* search result page */
+  /* no results search page */
+  /* individual paged search (i.e. body.search-paged-3) */
+  /* 404 page */
+  .single h2:first-child {
+    margin-top: 0;
+  }
+  .single p.byline {
+    margin: 0 0 0.5em 0;
+  }
+  .single p.byline a {
+    color: #7c81b8;
+  }
+  .single p.byline a:hover, .single p.byline a:focus {
+    color: #10167f;
+  }
+
+  /* single post page */
+  /* individual post page by id (i.e. body.postid-73) */
+  /* individual paged single (i.e. body.single-paged-3) */
+  /* attatchment page */
+  /* individual attatchment page (i.e. body.attachmentid-763) */
+  /* style mime type pages */
+  /* author page */
+  /* user nicename (i.e. body.author-samueladams) */
+  /* paged author archives (i.e. body.author-paged-4) for page 4 */
+  /* category page */
+  /* individual category page (i.e. body.category-6) */
+  /* replace the number to the corresponding page number */
+  /* tag page */
+  /* individual tag page (i.e. body.tag-news) */
+  /* replace the number to the corresponding page number */
+  /* custom page template page */
+  /* individual page template (i.e. body.page-template-contact-php */
+  /* replace the number to the corresponding page number */
+  /* parent page template */
+  /* child page template */
+  /* replace the number to the corresponding page number */
+  /* if user is logged in */
+  /* paged items like search results or archives */
+  /* individual paged (i.e. body.paged-3) */
+  /*
+  SIDEBAR STYLES
+  If the sidebar is present, we can add special styles
+  for example using golden section column widths.
+  */
+  .sidebar1 #main {
+    margin-top: 2.2em;
+    padding-left: 1em;
+  }
+  .sidebar1 #main #social-share {
+    margin: 1em 0;
+  }
+  .sidebar1 #main .article-footer {
+    padding-bottom: 1.5em;
+    border-bottom: 1px dotted #dddddd;
+  }
+  .sidebar1 .eightcol {
+    width: 61.8034%;
+    padding-right: 1.5em;
+    border-right: 1px dotted #dddddd;
+  }
+  .sidebar1 #sidebar1.fourcol {
+    margin-top: 2.2em;
+    width: 38.1966%;
+    padding-left: 1em;
+  }
+  .sidebar1 #sidebar1.fourcol h4.widgettitle:first-child {
+    margin-top: .7em;
+  }
+  .sidebar1 #sidebar1.fourcol p, .sidebar1 #sidebar1.fourcol .textwidget p {
+    font-size: 0.875em !important;
+  }
+}
+/* SMALLER MOBILE DEVICES
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .byline {
+    display: none;
+  }
+
+  #beforecontainer {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: block;
+    position: relative;
+    line-height: 0;
+  }
+  #nav-mobile span.mobile-link {
+    position: absolute;
+    top: 14px;
+    left: 20%;
+    line-height: 1.3em;
+  }
+  #nav-mobile span.mobile-link a {
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 85%;
+  }
+  #nav-mobile span.mobile-link a:hover, #nav-mobile span.mobile-link a:focus {
+    color: #fff;
+  }
+  #nav-mobile .sub-menu {
+    display: none;
+  }
+
+  #give-nav {
+    display: none;
+  }
+
+  span.action-details {
+    color: white;
+    font-family: "ff-meta-web-pro", "Trebuchet MS", Verdana, sans-serif;
+    font-size: .875em;
+    display: none;
+  }
+
+  #search-form {
+    display: none;
+  }
+
+  #home-buttons {
+    display: none;
+  }
+
+  #tweet {
+    display: none;
+  }
+
+  #call-to-action {
+    margin: 0;
+    padding: 0;
+  }
+  #call-to-action ul {
+    margin-left: 0;
+  }
+
+  #social-buttons {
+    display: none;
+  }
+
+  #footer-nav {
+    display: none;
+  }
+
+  .nav-button {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 50px;
+    height: 35px;
+    background: url("../images/menu-icon-large.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/menu-icon-large.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/menu-icon-large.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/menu-icon-large.png"), -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 21px, 100%;
+    background-color: #7c81b8;
+    cursor: pointer;
+    border: 0 none;
+    /* border-bottom: 1px solid rgba(255,255,255,.1); */
+    /* box-shadow: 0 0 4px rgba(0,0,0,.7) inset; */
+    border-radius: 5px;
+    z-index: 999;
+    text-indent: -9999px;
+    text-decoration: none;
+  }
+
+  .nav-button:hover, .nav-button:active, .nav-button:focus {
+    /* background-color: darken($uwlightblue, 20%); */
+    box-shadow: none;
+  }
+
+  .nav-button.open {
+    background: url("../images/close-icon-large.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/close-icon-large.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/close-icon-large.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: url("../images/close-icon-large.png"), -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 21px, 100%;
+    background-color: #7c81b8;
+  }
+
+  /* Navigation Bar
+  -------------------------------------------------------- */
+  /* 	body { padding-top: 50px; }  */
+  .primary-nav {
+    width: 100%;
+    float: none;
+    background-color: #10167f;
+    /* change the menu color */
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    display: block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    /* position: absolute; */
+    top: 0px;
+    left: 0px;
+    z-index: 998;
+    clear: both;
+  }
+
+  .primary-nav li {
+    display: none;
+    width: 100%;
+    font-family: "ff-meta-web-pro", "Trebuchet MS", Verdana, sans-serif;
+  }
+
+  .primary-nav li a {
+    display: block;
+    width: 100%;
+    padding: 10px 5%;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #7c81b8;
+  }
+
+  .primary-nav li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-color: transparent;
+    color: white;
+  }
+
+  .primary-nav > li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  /* Toggle the navigation bar open  */
+  .primary-nav.open {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .primary-nav.open li {
+    display: block;
+    line-height: 1;
+  }
+
+  /* Submenus – optional .parent class indicates dropdowns */
+  .primary-nav > li:hover > a {
+    background: #000064;
+    border-bottom-color: transparent;
+  }
+
+  .primary-nav li.parent > a:after {
+    content: "▼";
+    color: rgba(255, 255, 255, 0.5);
+    float: right;
+  }
+
+  .primary-nav li.parent > a:hover {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .primary-nav li ul {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 0 none;
+    padding: 0;
+  }
+
+  .primary-nav li ul a {
+    border: 0 none;
+    font-size: 12px;
+    padding: 10px 5%;
+    font-weight: normal;
+  }
+
+  .primary-nav li:hover ul {
+    display: block;
+    border-top: 0 none;
+  }
+
+  /********************
+  WORDPRESS BODY CLASSES
+  style a page via class
+  ********************/
+  /* for sites that are read right to left (i.e. hebrew) */
+  .home section {
+    border-bottom: 1px solid #7c81b8;
+    padding: 0.5em 0;
+  }
+  .home section h3 {
+    margin: 0;
+    padding: 0;
+    color: #ff9600;
+  }
+  .home section p {
+    margin: 0.3em 0 0;
+    font-size: 81%;
+  }
+  .home #action-home {
+    background: #515151;
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 0;
+    border-bottom: 0;
+  }
+  .home #action-home:hover, .home #action-home:focus, .home #action-home:active {
+    opacity: .7;
+  }
+  .home #action-home a {
+    text-decoration: none;
+    display: table-cell;
+  }
+  .home #action-home h2 {
+    margin: 0;
+    padding: 0.2em 0 0;
+    color: #ff9600;
+    line-height: 1.4em;
+    display: table-cell;
+  }
+  .home #action-home span {
+    background: #ff9600;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    left: 83%;
+    top: 7px;
+  }
+  .home h3.post-title {
+    text-transform: none;
+    border-bottom: 1px solid #10167f;
+    font-size: .875em;
+    margin: 0;
+    padding: 0.3em 0;
+    overflow: hidden;
+  }
+  .home h3.post-title:hover, .home h3.post-title:focus, .home h3.post-title:active {
+    color: #7c81b8;
+    background: #000064;
+  }
+  .home section.entry-content {
+    display: none;
+  }
+  .home footer {
+    color: #7c81b8;
+  }
+  .home footer #inner-footer {
+    background-color: #10167f;
+    font-size: 81%;
+  }
+
+  /* home page */
+  /* blog template page */
+  /* archive page */
+  /* date archive page */
+  /* replace the number to the corresponding page number */
+  /* search page */
+  /* search result page */
+  /* no results search page */
+  /* individual paged search (i.e. body.search-paged-3) */
+  /* 404 page */
+  .single #cta-buttons {
+    display: none;
+  }
+  .single #sub-page-search {
+    display: none;
+  }
+  .single .sidebar {
+    display: none;
+  }
+
+  /* single post page */
+  /* individual post page by id (i.e. body.postid-73) */
+  /* individual paged single (i.e. body.single-paged-3) */
+  /* attatchment page */
+  /* individual attatchment page (i.e. body.attachmentid-763) */
+  /* style mime type pages */
+  /* author page */
+  /* user nicename (i.e. body.author-samueladams) */
+  /* paged author archives (i.e. body.author-paged-4) for page 4 */
+  /* category page */
+  /* individual category page (i.e. body.category-6) */
+  /* replace the number to the corresponding page number */
+  /* tag page */
+  /* individual tag page (i.e. body.tag-news) */
+  /* replace the number to the corresponding page number */
+  /* custom page template page */
+  .page-template-default #main {
+    margin: 0 0.5em;
+  }
+  .page-template-default #cta-buttons {
+    display: none;
+  }
+  .page-template-default #sub-page-search {
+    display: none;
+  }
+  .page-template-default .sidebar {
+    display: none;
+  }
+
+  /* individual page template (i.e. body.page-template-contact-php */
+  /* replace the number to the corresponding page number */
+  /* parent page template */
+  /* child page template */
+  /* replace the number to the corresponding page number */
+  /* if user is logged in */
+  /* paged items like search results or archives */
+  /* individual pages */
+}
+/* End Mobile Styles */
+.flatbutton {
+  background: #aaa;
+  color: #fff;
+  border: 0 none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.flatbutton:hover, .flatbutton:focus {
+  background-color: #969696;
+}
+
+.flatbutton, x:-moz-any-link, x:default {
+  padding: 0 20px;
+  font-size: 85%;
+}
+
+.flatbutton-orange {
+  background-color: #f57814;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9600), to(#f57814));
+  background-image: -webkit-linear-gradient(top, #ff9600, #f57814);
+  background-image: -moz-linear-gradient(top, #ff9600, #f57814);
+  background-image: -o-linear-gradient(top, #ff9600, #f57814);
+  background-image: linear, to bottom, #ff9600, #f57814;
+}
+.flatbutton-orange:hover, .flatbutton-orange:focus {
+  background-color: #ff9600;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff9600), to(#f57814));
+  background-image: -webkit-linear-gradient(bottom, #ff9600, #f57814);
+  background-image: -moz-linear-gradient(bottom, #ff9600, #f57814);
+  background-image: -o-linear-gradient(bottom, #ff9600, #f57814);
+  background-image: linear, to top, #ff9600, #f57814;
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #555;
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear, to bottom, white, #e6e6e6;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-large {
+  padding: 11px 19px;
+  font-size: 17.5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+.btn-small {
+  padding: 2px 10px;
+  font-size: 13px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 3px;
+}
+*/
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+.btn-mini {
+  padding: 0 6px;
+  font-size: 10.5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear, to bottom, #0088cc, #0044cc;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0044cc;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #0044cc;
+  *background-color: #003bb3;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #003399 \9;
+}
+
+.btn-warning {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear, to bottom, #fbb450, #f89406;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+  border-color: #f89406 #f89406 #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #f89406;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  color: #ffffff;
+  background-color: #f89406;
+  *background-color: #df8505;
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605 \9;
+}
+
+.btn-danger {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #da4f49;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear, to bottom, #ee5f5b, #bd362f;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #bd362f;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  color: #ffffff;
+  background-color: #bd362f;
+  *background-color: #a9302a;
+}
+
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #942a25 \9;
+}
+
+.btn-success {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear, to bottom, #62c462, #51a351;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #51a351;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  color: #ffffff;
+  background-color: #51a351;
+  *background-color: #499249;
+}
+
+.btn-success:active,
+.btn-success.active {
+  background-color: #408140 \9;
+}
+
+.btn-info {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #49afcd;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear, to bottom, #5bc0de, #2f96b4;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #2f96b4;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  color: #ffffff;
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+}
+
+.btn-info:active,
+.btn-info.active {
+  background-color: #24748c \9;
+}
+
+.btn-inverse {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #363636;
+  background-image: -moz-linear-gradient(top, #444444, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
+  background-image: -webkit-linear-gradient(top, #444444, #222222);
+  background-image: -o-linear-gradient(top, #444444, #222222);
+  background-image: linear, to bottom, #444444, #222222;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+  border-color: #222222 #222222 black;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #222222;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  color: #ffffff;
+  background-color: #222222;
+  *background-color: #151515;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808 \9;
+}
+
+button.btn,
+input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #0088cc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #005580;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  font-size: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  *margin-left: .3em;
+}
+
+.btn-group:first-child {
+  *margin-left: 0;
+}
+
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+.btn-toolbar {
+  font-size: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-toolbar > .btn + .btn,
+.btn-toolbar > .btn-group + .btn,
+.btn-toolbar > .btn + .btn-group {
+  margin-left: 5px;
+}
+
+.btn-group > .btn {
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-group > .btn + .btn {
+  margin-left: -1px;
+}
+
+.btn-group > .btn,
+.btn-group > .dropdown-menu,
+.btn-group > .popover {
+  font-size: 14px;
+}
+
+.btn-group > .btn-mini {
+  font-size: 10.5px;
+}
+
+.btn-group > .btn-small {
+  font-size: 11.9px;
+}
+
+.btn-group > .btn-large {
+  font-size: 17.5px;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.btn-group > .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle {
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: 2;
+}
+
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+.btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  *padding-top: 5px;
+  *padding-bottom: 5px;
+}
+
+.btn-group > .btn-mini + .dropdown-toggle {
+  padding-left: 5px;
+  padding-right: 5px;
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+
+.btn-group > .btn-small + .dropdown-toggle {
+  *padding-top: 5px;
+  *padding-bottom: 4px;
+}
+
+.btn-group > .btn-large + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+.btn-group.open .dropdown-toggle {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background-color: #e6e6e6;
+}
+
+.btn-group.open .btn-primary.dropdown-toggle {
+  background-color: #0044cc;
+}
+
+.btn-group.open .btn-warning.dropdown-toggle {
+  background-color: #f89406;
+}
+
+.btn-group.open .btn-danger.dropdown-toggle {
+  background-color: #bd362f;
+}
+
+.btn-group.open .btn-success.dropdown-toggle {
+  background-color: #51a351;
+}
+
+.btn-group.open .btn-info.dropdown-toggle {
+  background-color: #2f96b4;
+}
+
+.btn-group.open .btn-inverse.dropdown-toggle {
+  background-color: #222222;
+}
+
+.btn .caret {
+  margin-top: 8px;
+  margin-left: 0;
+}
+
+.btn-large .caret {
+  margin-top: 6px;
+}
+
+.btn-large .caret {
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 5px;
+}
+
+.btn-mini .caret,
+.btn-small .caret {
+  margin-top: 8px;
+}
+
+.dropup .btn-large .caret {
+  border-bottom-width: 5px;
+}
+
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.btn-group-vertical {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+.btn-group-vertical > .btn {
+  display: block;
+  float: none;
+  max-width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-group-vertical > .btn + .btn {
+  margin-left: 0;
+  margin-top: -1px;
+}
+
+.btn-group-vertical > .btn:first-child {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.btn-group-vertical > .btn:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+.btn-group-vertical > .btn-large:first-child {
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+
+.btn-group-vertical > .btn-large:last-child {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+body {
+  font-family: "ff-meta-web-pro", "Trebuchet MS", Verdana, sans-serif, "Trebuchet MS", Verdana, sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #565656;
+  padding-top: 0px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.30px;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+/* for sites that are read right to left (i.e. hebrew) */
+/* home page */
+/* blog template page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* parent page template */
+/* child page template */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+a, a:visited {
+  color: #7c81b8;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #10167f;
+}
+a:link, a:visited:link {
+  /*
+  this highlights links on iPhones/iPads.
+  so it basically works like the :hover selector
+  for mobile devices.
+  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: "ff-meta-web-pro", "Trebuchet MS", Verdana, sans-serif, "Trebuchet MS", Verdana, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #10167f;
+  /* margin: 0; */
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */
+}
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  text-decoration: none;
+}
+
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+h2, .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+  font-size: 1.125em;
+}
+
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*********************
+HEADER SYTLES
+*********************/
+.header #logo {
+  display: none;
+}
+.header #logo-mobile {
+  line-height: 0;
+  margin-bottom: -1px;
+}
+.header #logo-mobile a {
+  line-height: 0;
+}
+.header #logo-mobile a img {
+  line-height: 0;
+  max-width: 100%;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+nav ul {
+  margin-left: 0;
+}
+
+.nav {
+  border: none;
+  border-bottom: 0;
+  display: table;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav li {
+  /*
+  so you really have to rethink your dropdowns for mobile.
+  you don't want to have it expand too much because the
+  screen is so small. How you manage your menu should
+  depend on the project. Here's some great info on it:
+  http://www.alistapart.com/articles/organizing-mobile/
+  */
+}
+.nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-bottom: none;
+  /*
+  remember this is for mobile ONLY, so there's no need
+  to even declare hover styles here, you can do it in
+  the style.scss file where it's relevant. We want to
+  keep this file as small as possible!
+  */
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+  font-weight: 400;
+}
+
+/* end .nav */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+#content {
+  /* margin-top: 2.2em; */
+}
+
+/* end .hentry */
+/* want to style individual post classes? Booya! */
+/* post by id (i.e. post-3) */
+/* general post style */
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+.byline {
+  font-size: 85%;
+  margin: 0;
+  color: #999;
+}
+
+/* entry content */
+.entry-content {
+  /*
+  image alignment on a screen this size may be
+  a bit difficult. It's set to start aligning
+  and floating images at the next breakpoint,
+  but it's up to you. Feel free to change it up.
+  */
+}
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+.entry-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+.entry-content video, .entry-content object {
+  max-width: 100%;
+  height: auto;
+}
+.entry-content pre {
+  background: #eee;
+  border: 1px solid #cecece;
+  padding: 10px;
+}
+
+/* end .entry-content */
+.wp-caption {
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+.wp-caption img {
+  margin-bottom: 0;
+  width: 100%;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+.page-navigation,
+.wp-prev-next {
+  margin: 1.1em 0 2.2em;
+}
+
+.bones_page_navi {
+  /* current page link */
+  /* end .bones_page_navi .bpn-current */
+  /* common styles for page-navi links */
+  /* remove the bg on end links */
+  /* previous link */
+  /* next page link */
+  /* first page link */
+  /* last page link */
+}
+.bones_page_navi li {
+  float: left;
+  margin-left: 10px;
+}
+.bones_page_navi li a {
+  padding: 3px 6px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.bones_page_navi li a:hover, .bones_page_navi li a:focus {
+  color: #f01d4f;
+  text-decoration: underline;
+}
+.bones_page_navi li.bpn-current {
+  padding: 3px 6px;
+  border-bottom: 2px solid #f01d4f;
+  position: relative;
+}
+.bones_page_navi li.bpn-current a {
+  /* hovering on current page link */
+}
+.bones_page_navi li.bpn-prev-link,
+.bones_page_navi li.bpn-next-link {
+  font-weight: 700;
+}
+.bones_page_navi li.bpn-prev-link a,
+.bones_page_navi li.bpn-next-link a {
+  padding: 0;
+}
+.bones_page_navi li.bpn-prev-link a:hover,
+.bones_page_navi li.bpn-next-link a:hover,
+.bones_page_navi li.bpn-first-page-link a:hover,
+.bones_page_navi li.bpn-last-page-link a:hover {
+  background: none;
+}
+
+/* end .bones_page_navi */
+/* fallback previous & next links */
+.wp-prev-next .prev-link {
+  float: left;
+}
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+#comments {
+  /* number of comments span */
+}
+
+.commentlist {
+  /* general comment classes */
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* comment meta */
+  /* comment content */
+  /* end .commentlist .comment_content */
+  /* comment reply link */
+  /* end .commentlist .comment-reply-link */
+}
+.commentlist li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  padding: 0.7335em 10px;
+  background: #efefef !important;
+  /* end .commentlist li ul.children */
+}
+.commentlist li:last-child {
+  margin-bottom: 0;
+}
+.commentlist li ul.children {
+  margin: 0;
+  /* variations */
+  /* change number for different depth */
+}
+.commentlist li[class*=depth-] {
+  margin-top: 1.1em;
+}
+.commentlist li.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+.commentlist li:not(.depth-1) {
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.commentlist .odd {
+  background: #eee;
+}
+.commentlist .even {
+  background: #fefefe;
+}
+.commentlist .vcard {
+  margin-left: 50px;
+}
+.commentlist .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+.commentlist .vcard time {
+  float: right;
+}
+.commentlist .vcard time a {
+  color: #999;
+  text-decoration: none;
+}
+.commentlist .vcard time a:hover {
+  text-decoration: underline;
+}
+.commentlist .vcard img.avatar {
+  position: absolute;
+  left: 10px;
+  padding: 2px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+.commentlist .comment_content {
+  margin-left: 50px;
+}
+.commentlist .comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.commentlist .comment-reply-link {
+  text-decoration: none;
+  float: right;
+  background: #4598bb;
+  padding: 3px 5px;
+  color: #fff;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
+  opacity: 1;
+}
+
+/* end .commentlist */
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+.respond-form {
+  margin: 1.5em 0;
+  padding-bottom: 2.2em;
+}
+.respond-form form {
+  margin: 0.75em 0;
+}
+.respond-form form ul#comment-form-elements {
+  margin-left: 0px;
+}
+.respond-form form li {
+  list-style-type: none;
+  clear: both;
+  margin-bottom: 0.7335em;
+}
+.respond-form form li label,
+.respond-form form li small {
+  display: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url],
+.respond-form form textarea {
+  padding: 3px 6px;
+  background: #efefef;
+  border: 2px solid #cecece;
+  line-height: 1.5em;
+  background: #efefef;
+  /* form validation */
+}
+.respond-form form input[type=text]:focus,
+.respond-form form input[type=email]:focus,
+.respond-form form input[type=url]:focus,
+.respond-form form textarea:focus {
+  background: #fff;
+}
+.respond-form form input[type=text]:invalid,
+.respond-form form input[type=email]:invalid,
+.respond-form form input[type=url]:invalid,
+.respond-form form textarea:invalid {
+  outline: none;
+  border-color: #fbc2c4;
+  background-color: #f6e7eb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url] {
+  max-width: 400px;
+  min-width: 250px;
+}
+.respond-form form textarea {
+  resize: none;
+  width: 97.3%;
+  height: 150px;
+}
+
+/* comment submit button */
+#submit {
+  margin-left: 0px;
+}
+
+/* comment form title */
+#comment-form-title {
+  margin: 0;
+}
+
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.widget ul li {
+  /* deep nesting */
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+  clear: both;
+}
+
+/*
+if you checked out the link above:
+http://www.alistapart.com/articles/organizing-mobile/
+you'll want to style the footer nav
+a bit more in-depth. Remember to keep
+it simple because you'll have to
+override these styles for the desktop
+view.
+*/
+/* end .footer-links */
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to 
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection. 
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* .menu is clearfixed inside mixins.scss */
+  .menu {
+    /* end .menu ul */
+  }
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  .menu ul li {
+    /*
+    plan your menus and drop-downs wisely.
+    */
+  }
+  .menu ul li a {
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+
+  /* end .menu */
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+  /* end .entry-content */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
+  /* end .footer-links */
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Grid Stylesheet
+  
+  I've seperated the grid so you can swap it out easily. It's
+  called at the top the style.scss stylesheet.
+  
+  There are a ton of grid solutions out there. You should definitely
+  experiment with your own. Here are some recommendations:
+  
+  http://gridsetapp.com - Love this site. Responsive Grids made easy.
+  http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+  http://gridpak.com/ - Create your own responsive grid.
+  
+  The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+  I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+  together, let's see how this works out. If you want to use 1140, the original 
+  values are commented out on each line.
+  
+  ******************************************************************/
+  .onecol {
+    width: 5.801104972%;
+  }
+
+  /* 4.85%;  } /* grid_1  */
+  .twocol {
+    width: 14.364640883%;
+  }
+
+  /* 13.45%; } /* grid_2  */
+  .threecol {
+    width: 22.928176794%;
+  }
+
+  /* 22.05%; } /* grid_3  */
+  .fourcol {
+    width: 31.491712705%;
+  }
+
+  /* 30.75%; } /* grid_4  */
+  .fivecol {
+    width: 40.055248616%;
+  }
+
+  /* 39.45%; } /* grid_5  */
+  .sixcol {
+    width: 48.618784527%;
+  }
+
+  /* 48%;    } /* grid_6  */
+  .sevencol {
+    width: 57.182320438000005%;
+  }
+
+  /* 56.75%; } /* grid_7  */
+  .eightcol {
+    width: 65.74585634900001%;
+  }
+
+  /* 65.4%;  } /* grid_8  */
+  .ninecol {
+    width: 74.30939226%;
+  }
+
+  /* 74.05%; } /* grid_9  */
+  .tencol {
+    width: 82.87292817100001%;
+  }
+
+  /* 82.7%;  } /* grid_10 */
+  .elevencol {
+    width: 91.436464082%;
+  }
+
+  /* 91.35%; } /* grid_11 */
+  .twelvecol {
+    width: 99.999999993%;
+  }
+
+  /* 100%;   } /* grid_12 */
+  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    position: relative;
+    float: left;
+    /* margin-left: 2.762430939%; */
+  }
+
+  .first {
+    margin-left: 0;
+  }
+
+  .last {
+    float: right;
+  }
+
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  /*********************
+  HEADER SYTLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  .nav {
+    /* background: #eee; */
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */
+  }
+  .nav li a {
+    border-bottom: 0;
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+  .nav li a:hover, .nav li a:focus {
+    /* background-color: #dedede; */
+  }
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    /* width: 200px; */
+    /* border: 1px solid #ccc; */
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+    if you need to go deeper, go nuts
+    just remember deeper menus suck
+    for usability. k, bai.
+    */
+  }
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    /* border-bottom: 1px solid #ccc; */
+    color: white;
+    background: #7c81b8;
+  }
+  .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+  .nav li ul.children li a:hover,
+  .nav li ul.children li a:focus {
+    background: #10167f;
+  }
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  .nav li:hover ul {
+    top: auto;
+    display: block;
+  }
+
+  /* end .nav */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  .sidebar {
+    margin-top: 2.2em;
+  }
+
+  .widgettitle {
+    border-bottom: 1px dotted #dddddd;
+    margin-bottom: 0.75em;
+  }
+
+  .widget {
+    padding: 0 10px;
+    margin: 0;
+  }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */
+  }
+
+  /* end .footer-links */
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop. 
+  
+  ******************************************************************/
+  #search-form input#s {
+    width: 74% !important;
+  }
+}
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  a, a:visited {
+    color: #444444 !important;
+    text-decoration: underline;
+  }
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

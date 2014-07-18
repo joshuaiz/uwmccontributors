@@ -1,0 +1,256 @@
+/******************************************************************
+Site Name: United Way of Metropolitan Chicago - Dev
+Author: UWMC Web Dev/Joshua Michaels
+Stylesheet: Agency Resources Stylesheet
+
+Remember, all the common styles are imported from the main
+stylesheet. Enter any site-specific styles here.
+
+We've added the body classes for each subdomain in uwmc-helper
+so any styles here will take precedence. Keep this file as light
+as possible and if you are adding any styles that may be useful
+elsewhere, use the main stylesheet(s). Boom! 
+
+******************************************************************/
+
+* {
+    /*transition*/
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.campaign.home .byline, .working-at-united-way .byline, .contact-us .byline { display:none; }
+
+.campaign.home #main .article-footer, .working-at-united-way #main .article-footer { border-bottom: 0; }
+
+.campaign.contact .social-sharing { display: none; }
+
+.campaign.home { 
+	h1.page-title { display: none; }
+	h1.trade { 
+		color: #FE230A !important; 
+		margin: 0 0 .5em;
+		font-weight: normal;
+		font-size: 3em;
+		line-height: 1.1;
+	}
+	h1.campaign-heading { 
+		color: #508AC8;
+		font-family: "Trade Gothic W01 Cn 18","ff-meta-web-pro", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		margin-bottom: 0 !important;
+	}
+	h3.trade {
+		margin-bottom: .5em;
+		margin-top: 1.5em;
+	}
+	h3.trade a {
+		color: #10167F !important;
+		text-decoration: none;
+		&:hover {
+			color: #FE230A !important;
+		}
+	}
+	
+}
+
+.entry-content {
+	input[type="text"], input[type="textarea"], input[type="email"], textarea {
+	background: #CDCDCD;
+	width: 70% !important;
+	min-height: 50px !important;
+	}
+}
+
+
+.campaign {
+
+	// a[href$='.pdf'] // this is for all the link which end .pdf extension. so you don;t need jquery  
+	// {  
+	// padding-left: 20px;
+	// background: url(../images/pdf-red.png) center left no-repeat;
+	// background-size: 16px;
+	// }  
+
+	#inner-header.wrap nav ul#menu-main-menu {
+		display: inline-block;
+		width: auto;
+		letter-spacing: .05em;
+	}
+
+	#inner-header.wrap nav { position: relative; }
+
+	#inner-header.wrap nav .donate-button {
+		position: absolute;
+	}
+
+	#inner-header .nav li a:hover { color: #fff; }
+
+	h5 { letter-spacing: normal; }
+
+
+	.actions { display: none; }
+
+
+	.entry-content {
+		margin-top: 2.2em;
+	}
+
+	.glyphicon {
+		color: #508AC8;
+		
+	}
+
+	.glyphicon:hover {
+		-webkit-transform: scale(1.1);
+		color: #FE230A;
+	}
+
+	.icon-tools {
+		color: #FF967D !important;
+		margin-right: 9px;
+		font-size: 85% !important;
+	}
+
+	.button-nav {
+		display: block; 
+		clear: both;
+		padding: 0;
+		width: 100%;
+			ul {
+				overflow:hidden;
+				margin:0;
+				padding:0;
+				width:100%; 
+				list-style-type: none;
+				.button-nav-1 { }
+				.button-nav-2 { }
+				.button-nav-3 { }
+				.button-nav-4 { margin-right: 0; }
+				.button-nav-5 { }
+				.button-nav-6 { }
+				.button-nav-7 { }
+					li {
+						float: left; 
+						margin-right: 1.43%; 
+						width: 23.9%;
+							a {
+								img {
+									max-width: 100%;
+									height: auto;
+									color: #10167F;
+									text-align: center;
+								}
+							}
+					}
+				}
+	}
+
+	#text-8 {
+		.textwidget {
+		a {}
+		img { 
+			vertical-align: middle;
+			width: 32px;
+		}
+		}
+	}
+
+	p.sfw-nocomments { display: none; }
+
+} // End .campaign
+
+
+@media only screen and (min-width: 768px) {
+	.ua-mobile-ipad .entry-content {
+		margin-right: 0;
+	}
+	
+	.mobile-search { display: none; }
+	.campaign-column {
+		width: 49%;
+		float: left;
+	}
+	#text-9 {
+		ul.nostyle {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				font-family: "Trade Gothic W01 Cn 18","ff-meta-web-pro", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				font-size: 1.4em;
+				a {
+					font-size: 1em;
+					&:hover { text-decoration: none !important; }
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	
+	.actions { display: none; }
+	
+	.mobile-link {
+		left: 22%;
+		a { margin-right: 9px; }
+	}
+	
+	.mobile-search { 
+		display: block;
+		padding: 8px 4px 6px 8px;
+		width: 100%;
+		background: #505050;
+		input#s { 
+			width: 69%;
+			border-radius: 0;
+			margin-right: 16px;
+			position: relative;
+			left: 8px;
+		}
+	}
+	
+	.search-404 {
+		input#s { 
+			width: 69%;
+			border-radius: 0;
+			margin-right: 12px;
+		}
+	}
+
+	.home section.entry-content {
+		display: block;
+	}
+	
+	.slider-wrapper {
+		display: block;
+		min-height: 100px; 
+	}
+	
+	#main .article-footer {
+		margin: 0 0 1em;
+	}
+	
+	input {
+	    /* -webkit-appearance: none; */
+	    -webkit-border-radius: 0;
+	}
+	
+	// fixes webkit rounded corners 
+	input[type="search"] { -webkit-appearance: none; border-radius: 0; }
+	
+	input[type="submit"], #searchsubmit {
+		padding: 2px 5px;
+		font-size: 11px;
+		height: 26px;
+		width: auto;
+		top: -3px;
+		position: relative;
+	}
+	
+} //end of media query
+

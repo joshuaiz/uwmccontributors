@@ -1,0 +1,15 @@
+/******************************************************************
+Theme Name: UWMC Chili Pepper
+Theme URI: http://uw-mc.org/
+Description: UWMC Responsive Custom Theme
+Author: Joshua Michaels
+Author URI: http://wearebio.com/
+Version: 1.0 Anaheim
+Tags: responsive, HTML5/CSS3, semantic
+
+This is the devlopment theme for the UWMC site redesign, based on the excellent Bones Starter Theme (http://themble.com/bones/) by Eddie Machado. All the styles are done in Sass (.scss files) and pre-compiled into CSS using CodeKit (http://incident57.com/codekit/).
+
+All common style elements have been stripped out and placed in a single stylesheet: common.scss (http://uw-mc.org/xxx)
+
+
+******************************************************************/

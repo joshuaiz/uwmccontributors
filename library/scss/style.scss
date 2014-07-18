@@ -1,0 +1,26 @@
+/******************************************************************
+Site Name: United Way of Metropolitan Chicago
+Author: UWMC Web Dev/Joshua Michaels
+Stylesheet: Main Stylesheet
+
+If you want to keep things organized and keep your sanity,
+I would suggest *not* editing this file at all. 
+
+Add any site-specific styles in _agencies.scss. 
+
+Before editing the main stylesheet, remember that any changes 
+you make will affect ALL the UWMC sites. It is set up this way
+so that any global changes can be made once and kept consistent
+across all the sites. Boooo-Ya!
+
+******************************************************************/
+
+//
+// IMPORTING STYLES
+//
+
+// import main stylesheet
+@import url('http://uw-mc.org/wp-content/themes/uwchilipepper/library/css/style.css');
+
+// import local styles
+@import "_campaign";
