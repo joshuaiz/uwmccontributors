@@ -245,3 +245,13 @@ function excludeCatsFromSearchResults( $query ) {
           $query->set( 'cat', '-520' ); // category ids to exclude
      } return $query;
 } add_action( 'pre_get_posts', 'excludeCatsFromSearchResults' );
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-nav' => __( 'Main Menu' ),
+      
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );

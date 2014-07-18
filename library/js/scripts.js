@@ -83,8 +83,11 @@ if (responsive_viewport <= 899) {
         
     }
     
+
 	
-	// add all your scripts here
+	$('.giver').hover(function() {
+        $(this).next('.giveinfo').slideToggle('300');
+    });
 	
  
 }); /* end of as page load scripts */

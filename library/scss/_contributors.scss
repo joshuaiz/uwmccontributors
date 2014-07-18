@@ -1,0 +1,160 @@
+/******************************************************************
+Site Name: United Way of Metropolitan Chicago - Dev
+Author: UWMC Web Dev/Joshua Michaels
+Stylesheet: Agency Resources Stylesheet
+
+Remember, all the common styles are imported from the main
+stylesheet. Enter any site-specific styles here.
+
+We've added the body classes for each subdomain in uwmc-helper
+so any styles here will take precedence. Keep this file as light
+as possible and if you are adding any styles that may be useful
+elsewhere, use the main stylesheet(s). Boom! 
+
+******************************************************************/
+
+* {
+    /*transition*/
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.top {
+	text-align: center;
+}
+
+.home h1.page-title {
+	display: none;
+}
+
+nav ul li {
+	font-size: .875em;
+}
+
+#inner-header.wrap nav .donate-button {
+	position: relative;
+	// right: -33px;
+	display: inline-block;
+/* float: right; */
+	top: -35px;
+}
+
+#content .pods_search, #content input[type="search"], #content input[type="text"] {
+	background: #ccc !important;
+	height: 51px !important;
+	width: 300px !important;
+	padding-left: .5em;
+}
+
+#content .pod_submit {
+	padding: 1em !important;
+	color: #fff !important;
+	top: 4px;
+	position: relative;
+	background-color: #10167F !important;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	&:hover {
+		background: #7C81B8 !important;
+	}
+}
+
+
+.giveinfo {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.ua-mobile-ipad .entry-content {
+		margin-right: 0;
+	}
+	
+	.mobile-search { display: none; }
+	.campaign-column {
+		width: 49%;
+		float: left;
+	}
+	#text-9 {
+		ul.nostyle {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				font-family: "Trade Gothic W01 Cn 18","ff-meta-web-pro", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				font-size: 1.4em;
+				a {
+					font-size: 1em;
+					&:hover { text-decoration: none !important; }
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	
+	.actions { display: none; }
+	
+	.mobile-link {
+		left: 22%;
+		a { margin-right: 9px; }
+	}
+	
+	.mobile-search { 
+		display: block;
+		padding: 8px 4px 6px 8px;
+		width: 100%;
+		background: #505050;
+		input#s { 
+			width: 69%;
+			border-radius: 0;
+			margin-right: 16px;
+			position: relative;
+			left: 8px;
+		}
+	}
+	
+	.search-404 {
+		input#s { 
+			width: 69%;
+			border-radius: 0;
+			margin-right: 12px;
+		}
+	}
+
+	.home section.entry-content {
+		display: block;
+	}
+	
+	.slider-wrapper {
+		display: block;
+		min-height: 100px; 
+	}
+	
+	#main .article-footer {
+		margin: 0 0 1em;
+	}
+	
+	input {
+	    /* -webkit-appearance: none; */
+	    -webkit-border-radius: 0;
+	}
+	
+	// fixes webkit rounded corners 
+	input[type="search"] { -webkit-appearance: none; border-radius: 0; }
+	
+	input[type="submit"], #searchsubmit {
+		padding: 2px 5px;
+		font-size: 11px;
+		height: 26px;
+		width: auto;
+		top: -3px;
+		position: relative;
+	}
+	
+} //end of media query
+

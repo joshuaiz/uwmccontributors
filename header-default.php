@@ -156,7 +156,7 @@
 					
 					
 					<nav role="navigation" class="main-nav">
-						<?php bones_main_nav(); ?>
+						<?php bones_main_nav(array( 'theme_location' => 'main-nav' )); ?>
 						<div class="donate-button"><a href="https://donate.uw-mc.org/page/contribute/Give"><button class="flatbutton flatbutton-orange">DONATE</button></a></div>
 					</nav>
 				
